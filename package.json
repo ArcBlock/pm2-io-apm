@@ -1,12 +1,15 @@
 {
-  "name": "@pm2/io",
-  "version": "6.0.0",
+  "name": "@arcblock/pm2.io",
+  "version": "6.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "PM2.io NodeJS APM",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "types": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/keymetrics/pm2-io-apm",
+  "repository": "https://github.com/ArcBlock/pm2-io-apm",
   "author": {
     "name": "PM2.io tech team",
     "email": "tech@pm2.io",
@@ -16,6 +19,10 @@
     {
       "name": "Vincent Vallet",
       "url": "https://github.com/wallet77"
+    },
+    {
+      "name": "skypesky",
+      "url": "https://github.com/skypesky"
     }
   ],
   "license": "Apache-2",
@@ -49,8 +56,10 @@
     "@types/redis": "~2.8.10",
     "chai": "4.1.2",
     "express": "^4.17.1",
+    "fs-extra": "^11.2.0",
     "ioredis": "^4.16.3",
     "koa": "^2.11.0",
+    "lodash": "^4.17.21",
     "mocha": "~7.1.0",
     "mongodb-core": "^3.2.7",
     "mysql": "~2.18.1",
@@ -65,7 +74,8 @@
     "tslint-config-standard": "~8.0.1",
     "typescript": "^5.2.2",
     "vue": "^2.6.11",
-    "vue-server-renderer": "^2.6.11"
+    "vue-server-renderer": "^2.6.11",
+    "zx": "^8.1.2"
   },
   "keywords": [],
   "nyc": {
@@ -83,6 +93,7 @@
   },
   "dependencies": {
     "async": "~2.6.1",
+    "dayjs": "^1.11.11",
     "debug": "~4.3.1",
     "eventemitter2": "^6.3.1",
     "require-in-the-middle": "^5.0.0",
