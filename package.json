@@ -1,6 +1,6 @@
 {
   "name": "@arcblock/pm2.io",
-  "version": "6.0.1",
+  "version": "6.1.1",
   "publishConfig": {
     "access": "public"
   },
@@ -30,11 +30,13 @@
     "build": "tsc -p tsconfig.json",
     "build:module": "tsc -p config/exports/tsconfig.module.json",
     "lint": "tslint --project . src/**/*.ts",
+    "lint:fix": "tslint --project . --fix src/**/*.ts",
     "unit": "npm run build && bash test.sh",
     "mono": "mocha  --exit --require ts-node/register",
     "test": "npm run unit",
     "watch": "tsc -w",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "bump-version": "zx --quiet scripts/bump-version.mjs"
   },
   "scripts-info": {
     "build": "(Trash and re)build the library",
@@ -93,6 +95,7 @@
   },
   "dependencies": {
     "async": "~2.6.1",
+    "bumpp": "^10.2.0",
     "dayjs": "^1.11.11",
     "debug": "~4.3.1",
     "eventemitter2": "^6.3.1",

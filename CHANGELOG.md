@@ -1,3 +1,7 @@
+## 6.1.1 (2025-7-22)
+
+- chore: upgrade pm2-io-apm to v6.1.0
+
 # 6.0.1
 
 - feat: default disable @pm2/io
