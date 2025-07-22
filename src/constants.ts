@@ -5,6 +5,10 @@ export default {
 };
 
 export function canUseInspector() {
+  if (process.env.PM2_IO_ENABLE !== 'true') {
+    return false;
+  }
+
   // @ts-ignore
   const isBun = typeof Bun !== 'undefined';
   const isAboveNode10 = semver.satisfies(process.version, '>= 10.1.0');

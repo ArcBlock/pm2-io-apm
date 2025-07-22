@@ -30,6 +30,7 @@
     "build": "tsc -p tsconfig.json",
     "build:module": "tsc -p config/exports/tsconfig.module.json",
     "lint": "tslint --project . src/**/*.ts",
+    "lint:fix": "tslint --project . --fix src/**/*.ts",
     "unit": "npm run build && bash test.sh",
     "mono": "mocha  --exit --require ts-node/register",
     "test": "npm run unit",
