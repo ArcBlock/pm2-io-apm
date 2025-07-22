@@ -5,7 +5,10 @@ export default {
 };
 
 export function canUseInspector() {
-  if (process.env.PM2_IO_ENABLE !== 'true') {
+  if (
+    process.env.PM2_IO_ENABLE !== 'true' &&
+    process.env.PM2_IO_ENABLE !== '1'
+  ) {
     return false;
   }
 
